@@ -10,7 +10,7 @@ const CLIENT_URL = process.env.CLIENT_URL;
 const DATABASE_URL = process.env.DATABASE_URL;
 const conString = 'postgres://postgres:82469173@localhost:5432/books_app'
 
-const client = new pg.Client(conString);
+const client = new pg.Client(DATABASE_URL);
 client.connect();
 client.on('error', err => console.error(err));
 
